@@ -1,5 +1,3 @@
-package com.mycompany.atividade03;
-
 
 public class Pessoa {
     public static void main(String[] args) {
