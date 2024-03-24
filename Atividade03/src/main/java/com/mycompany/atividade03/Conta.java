@@ -8,87 +8,80 @@
  * @author shayr
  */
 
-
-class Conta {
+public class Conta{
     private Pessoa titular;
-    private String numero;
     private String agencia;
-    private int banco;
+    private String numero;
+    private int banco; 
     private double saldo;
 
-    public Conta(Pessoa titular, String numero) {
-        this.titular = titular;
+    public Conta(Pessoa titular, String numero, int banco){
         this.numero = numero;
-        this.agencia = "304";
-        this.banco = 01;
-        this.saldo = 0.0;
-    }
-
-    public Conta(Pessoa titular, String numero, String agencia, int banco) {
-        this.titular = titular;
-        this.numero = numero;
-        this.agencia = agencia;
         this.banco = banco;
-        this.saldo = 0.0;
+        this.titular = titular;
+        this.agencia = "0001";
+        this.saldo = 0;
     }
 
+    public boolean depositar(double valor){
+        if(valor > 0){
+            saldo = saldo + valor;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean sacar(double valor){
+        if(valor > 0 && valor <= saldo){
+            saldo = saldo - valor;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean transferir(double valor, Conta contaDestino){
+        if(sacar(valor)){
+            contaDestino.depositar(valor);
+            return true;
+        }
+        return false;
+    }
+
+ 
     public Pessoa getTitular() {
-        return this.titular;
+        return titular;
     }
 
     public void setTitular(Pessoa titular) {
         this.titular = titular;
     }
 
-    public String getNumero() {
-        return this.numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
     public String getAgencia() {
-        return this.agencia;
+        return agencia;
     }
 
     public void setAgencia(String agencia) {
         this.agencia = agencia;
     }
 
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
     public int getBanco() {
-        return this.banco;
+        return banco;
     }
 
     public void setBanco(int banco) {
         this.banco = banco;
     }
 
-    public double getSaldo() {
+    public double getSaldo(){
         return this.saldo;
     }
 
-    public boolean sacar(double valor) {
-        if (valor > 0 && saldo >= valor) {
-            saldo -= valor;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean transferir(double valor, Conta contaDestino) {
-        if (this.sacar(valor)) {
-            contaDestino.depositar(valor);
-            return true;
-        }
-        return false;
-    }
 }
