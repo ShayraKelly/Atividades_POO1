@@ -4,15 +4,16 @@ public class Cliente {
     private String endereço;
     private String telefone;
     private String email;
+    private int n_conta;
 
     //metodos
-    public Cliente(String nome, String endereço, String telefone, String email) {
+    public Cliente(String nome, String endereço, String telefone, String email, int n_conta) {
         this.nome = nome;
         this.endereço = endereço;
         this.telefone = telefone;
         this.email = email;
+        this.n_conta = n_conta;
     }
-
     public String getNome() {
         return nome;
     }
@@ -37,4 +38,11 @@ public class Cliente {
     public void setEmail(String email) {
         this.email = email;
     }
+    public int getN_conta() {
+        return n_conta;
+    }
+    public void setN_conta(int n_conta) {
+        this.n_conta = n_conta;
+    }
+    
 }
