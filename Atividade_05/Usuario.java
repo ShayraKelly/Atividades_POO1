@@ -4,13 +4,15 @@ public class Usuario {
     private int telefone;
     private String email;
     private String cpf;
+    private int emprestimo;
 
 //métodos
-    public Usuario(String nome, int telefone, String email, String cpf) {
+    public Usuario(String nome, int telefone, String email, String cpf, int emprestimo) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.cpf = cpf;
+        this.emprestimo = emprestimo;
     }
 
     public String getNome() {
@@ -43,5 +45,13 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public int getEmprestimo() {
+        return emprestimo;
+    }
+
+    public void setEmprestimo(int emprestimo) {
+        this.emprestimo = emprestimo;
     }
 }

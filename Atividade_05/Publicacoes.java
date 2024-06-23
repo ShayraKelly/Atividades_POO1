@@ -4,15 +4,15 @@ public class Publicacoes {
     private String dt_publicacao;
     private String publicacoes_ref;
     private String autor;
-    private emprestimo;
+    private double multa;
 
 //metodos    
-    public Publicacoes(String titulo, String dt_publicacao, String publicacoes_ref, String autor, emprestimo) {
+    public Publicacoes(String titulo, String dt_publicacao, String publicacoes_ref, String autor, double multa) {
         this.titulo = titulo;
         this.dt_publicacao = dt_publicacao;
         this.publicacoes_ref = publicacoes_ref;
         this.autor = autor;
-        this.emprestimo = emprestimo;
+        this.multa = multa;
     }
 
     public String getTitulo() {
@@ -46,4 +46,13 @@ public class Publicacoes {
     public void setAutor(String autor) {
         this.autor = autor;
     }
+
+    public double getMulta() {
+        return multa;
+    }
+
+    public void setMulta(double multa) {
+        this.multa = multa;
+    }
+
 }

@@ -1,4 +1,4 @@
-public class Biblioteca {
+public class Biblioteca{
 //atributos
     public String nome;
     public String endereco;

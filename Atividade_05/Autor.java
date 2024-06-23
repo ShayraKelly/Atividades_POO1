@@ -10,5 +10,4 @@ public class Autor extends Publicacoes{
         this.titulacao = titulacao;
     }
 
-
 }

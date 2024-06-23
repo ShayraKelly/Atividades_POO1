@@ -7,5 +7,4 @@ public class Artigo extends Publicacoes{
         super(titulo, dt_publicacao, publicacoes_ref, autor);
         this.resumo = resumo;
     }
-
 }
