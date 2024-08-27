@@ -1,14 +1,10 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner carros = new Scanner(System.in);
-        ArrayList<Carro> carrosDisponiveis = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
         ArrayList<Cliente> clientes = new ArrayList<>();
-
-        carrosDisponiveis.add(new Carro(("Toyota", "Corolla", "ABC1234", 2023, 150)));
-        carrosDisponiveis.add(new Carro(("Honda", "Civic", "DEF5678", 2022, 130)));
 
         while (true) {
             System.out.println("1. Cadastrar Cliente");
@@ -31,7 +27,8 @@ public class Main {
                     String endereco = scanner.next();
                     System.out.println("CPF: ");
                     String cpf = scanner.next();
-                    clientes.add(new PessoaFisica(nome, telefone, endereco, cpf));
+                    Cliente novoCliente = new Pessoa_Fisica(nome, telefone, endereco, cpf);
+                    clientes.add(novoCliente);
                     System.out.println("Cadastro realizado com sucesso!");
                 } else if (tipoCliente == 2) {
                     System.out.print("Nome: ");
@@ -44,7 +41,8 @@ public class Main {
                     String cnpj = scanner.next();
                     System.out.println("Nome do representante: ");
                     String nome_representante = scanner.next();
-                    clientes.add(new PessoaJuridica(nome, telefone, endereco, cnpj, nome_representante));
+                    Cliente novoCliente = new Pessoa_Juridica(nome, telefone, endereco, cnpj, nome_representante);
+                    clientes.add(novoCliente);
                     System.out.println("Cadastro realizado com sucesso!");
                 }
                     break;
