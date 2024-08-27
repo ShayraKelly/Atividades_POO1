@@ -2,10 +2,10 @@ public class Carro_SUV extends Carro{
     private String tam_portamalas;
     private String tipo_tracao;
     private String tipo_combustivel;
-    private String ar_condicionado;
+    private boolean ar_condicionado;
     
-    public Carro_SUV(String marca, String modelo, String placa, String valor_locacao, int ano, String tam_portamalas,
-            String tipo_tracao, String tipo_combustivel, String ar_condicionado) {
+    public Carro_SUV(String marca, String modelo, String placa, double valor_locacao, int ano, String tam_portamalas,
+            String tipo_tracao, String tipo_combustivel, boolean ar_condicionado) {
         super(marca, modelo, placa, valor_locacao, ano);
         this.tam_portamalas = tam_portamalas;
         this.tipo_tracao = tipo_tracao;
@@ -37,11 +37,11 @@ public class Carro_SUV extends Carro{
         this.tipo_combustivel = tipo_combustivel;
     }
 
-    public String getAr_condicionado() {
+    public boolean getAr_condicionado() {
         return ar_condicionado;
     }
 
-    public void setAr_condicionado(String ar_condicionado) {
+    public void setAr_condicionado(boolean ar_condicionado) {
         this.ar_condicionado = ar_condicionado;
     }
     
