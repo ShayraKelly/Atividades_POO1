@@ -1,11 +1,11 @@
 public class Carro_Luxo extends Carro{
     private String tam_portamalas;
     private String gps_int;
-    private String ar_condicionado;
+    private boolean ar_condicionado;
     private int qtd_airbags;
-    
-    public Carro_Luxo(String marca, String modelo, String placa, String valor_locacao, int ano, String tam_portamalas,
-            String gps_int, String ar_condicionado, int qtd_airbags) {
+
+    public Carro_Luxo(String marca, String modelo, String placa, double valor_locacao, int ano, String tam_portamalas,
+            String gps_int, boolean ar_condicionado, int qtd_airbags) {
         super(marca, modelo, placa, valor_locacao, ano);
         this.tam_portamalas = tam_portamalas;
         this.gps_int = gps_int;
@@ -26,21 +26,15 @@ public class Carro_Luxo extends Carro{
     }
 
     public void setGps_int(String gps_int) {
-        if (gps_int = "S") {
-            gps_int = true;
-        }if (gps_int = "N") {
-            gps_int = false;
-        } else {
-            System.err.println("Resposta inválida!");
-        }
+        this.gps_int = gps_int;
     }
 
-    public String getAr_condicionado() {
+    public boolean isAr_condicionado() {
         return ar_condicionado;
     }
 
-    public void setAr_condicionado(String ar_condicionado) {
-        this.ar_condicionado = true;
+    public void setAr_condicionado(boolean ar_condicionado) {
+        this.ar_condicionado = ar_condicionado;
     }
 
     public int getQtd_airbags() {
