@@ -7,13 +7,13 @@ public abstract class Carro {
     private int ano;
     private double valor_locacao;
 
-        public Carro(String marca, String modelo, String placa, double valor_locacao, int ano) {
-            this.marca = marca;
-            this.modelo = modelo;
-            this.placa = placa;
-            this.valor_locacao = valor_locacao;
-            this.ano = ano;
-        }
+    public Carro(String marca, String modelo, String placa, double valor_locacao, int ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.placa = placa;
+        this.valor_locacao = valor_locacao;
+        this.ano = ano;
+    }
 
     public static ArrayList<ArrayList<Carro>> criarListaDeListas() {
         return new ArrayList<>();
@@ -37,10 +37,10 @@ public abstract class Carro {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    public String getValor_locacao() {
+    public double getValor_locacao() {
         return valor_locacao;
     }
-    public void setValor_locacao(String valor_locacao) {
+    public void setValor_locacao(double valor_locacao) {
         this.valor_locacao = valor_locacao;
     }
     public int getAno() {
